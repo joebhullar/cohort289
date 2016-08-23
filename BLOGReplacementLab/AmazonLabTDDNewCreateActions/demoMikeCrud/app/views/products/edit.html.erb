@@ -1,0 +1,19 @@
+<%= form_for @product do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :price %>:
+  <%= f.text_field :price %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+
+  <%= f.submit %>
+  <!-- THIS SUBMIT BUTTON IS RESPONSIBLE FOR SENDING THAT DATA INTO THE THE UPDATE ACTION -->
+  <!-- <input type="submit" name="commit" value="Update Product" data-disable-with="Update Product" />
+</form> -->
+
+<!-- THE ONLY REASON IT KNOWS WHAT TO DO IS BECAUSE OF THE FORM TAG THAT ITS SITTING IN /products/7 -->
+    <% end %>
+
+<!-- THIS EDIT VIEW IS STILL LINKED TO THE CONTROLLER SO @product is OBTAINED FROM THE CONTROLLER -->

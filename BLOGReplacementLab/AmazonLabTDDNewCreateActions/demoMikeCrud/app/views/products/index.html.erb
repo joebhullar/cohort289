@@ -1,0 +1,16 @@
+<h1>THIS IS INDEX</h1>
+<h1>THIS IS IN THE NEW BRANCH THAT WE HAVE MADE CHANGES IN!</h1>
+
+<% if flash[:notice] %>
+   <div class="notice"><%= flash[:notice] %></div>
+ <% end %>
+<!-- THE @products variable is obtained from the controller BECAUSE OF   before_action :find_product, only: [:show , :edit -->
+<%@products.each do |product|%>
+    <h2> NAME:  <%=product.title%> </h2>
+          <%= link_to "Edit", edit_product_path(product) %>
+          <%= link_to "Delete", product_path(product), method: :delete %>
+
+          <!-- THIS IS BASICALY THE SAME THING AS edit_product_path(product.id) -->
+    <h3> PRICE:  <%=product.price%></h3>
+    <h3> Description:  <%=product.description%> </h3>
+<%end%>

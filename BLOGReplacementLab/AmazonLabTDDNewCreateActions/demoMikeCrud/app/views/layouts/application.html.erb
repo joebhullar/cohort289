@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DemoMikeCrud</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- THIS IS THE FILE YOU USE TO CREATE THE LINKS AND THE PATHS -->
+    <!-- THIS IS THE FILE YOU USE TO DECLARE HEADER LINKS AND PATHS TO ALL PAGES!! -->
+    <!-- IN OTHERWORDS THIS IS STATIONARY TEXT ON ALL PAGES :D -->
+    <%= link_to "Products", root_path %>
+    <%= link_to "New", new_product_path %>
+    <%= yield %>
+  </body>
+</html>
